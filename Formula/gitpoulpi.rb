@@ -2,7 +2,7 @@
 #
 # Formula for a tap repository (Formula/gitpoulpi.rb of a `homebrew-gitpoulpi` repo, installed with
 # `brew install <owner>/gitpoulpi/gitpoulpi`). It installs the official release archives, no compilation.
-# Replace 1.1.1 and the @SHA256_...@ values (first field of each archive's .sha256), then
+# Replace 1.2.0 and the @SHA256_...@ values (first field of each archive's .sha256), then
 # `brew install --build-from-source ./gitpoulpi.rb` and `brew test gitpoulpi`.
 #
 # A formula download is not quarantined, so Gatekeeper does not block the unsigned binaries. The programs go
@@ -12,28 +12,28 @@
 class Gitpoulpi < Formula
   desc "Git client for the terminal with a clickable commit graph, a CLI and an MCP server"
   homepage "https://github.com/Poulpi-Lab/GitPoulpi"
-  version "1.1.1"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/Poulpi-Lab/GitPoulpi/releases/download/releases/v#{version}/gitpoulpi-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "b32e200c1eef405a6d9c5b635c978193e1b548b4ac1dfd045ff3802c1c4f31f3"
+      sha256 "2a8eb574e56d83fe22c33497fe245de6d616e4a9c91521168255a3e3431816f3"
     end
     on_intel do
       url "https://github.com/Poulpi-Lab/GitPoulpi/releases/download/releases/v#{version}/gitpoulpi-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "62ba1df4afb13d97728a5e082299cca0319828894e81f1aff034907a14caa8cc"
+      sha256 "0c242cf495e898a015523e52bb9ee31467da7580f58f7a90a9dcf0f528d0bbcf"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Poulpi-Lab/GitPoulpi/releases/download/releases/v#{version}/gitpoulpi-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d03b6d3f3dafeec6dc39f1b03cf4fc41b8fb0c74ae39786ec12ed15f82af6a54"
+      sha256 "540b4df9ee9ba8288a5dd315e22151970aa37a26299be0c1af0d2a6d4d600590"
     end
     on_arm do
       url "https://github.com/Poulpi-Lab/GitPoulpi/releases/download/releases/v#{version}/gitpoulpi-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "cb5139a6aa8582734c457acffcf584b57c28812515642689615e3edf1f49d2fb"
+      sha256 "f7f2876eb43c7de9d083865466379e635e979972ff29d6ef32d9c9dec66a8112"
     end
   end
 
